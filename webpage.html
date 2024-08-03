@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar .call-to-action-container {
+            margin-left: auto;
+        }
+
+        .navbar .call-to-action-container button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .navbar .call-to-action-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .main-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .section-content {
+            flex-grow: 1;
+        }
+
+        .call-to-action-container,
+        .image-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .call-to-action-container button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .call-to-action-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover; /* Ensures the image covers the specified dimensions */
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer .footer-content .app-bar-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer .footer-content .contact-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+
+        .footer .footer-content .contact-info div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer .footer-content .contact-info button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer .footer-content .contact-info button:hover {
+            background-color: #0056b3;
+        }
+
+        .footer .footer-content .subscription-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer .footer-content .subscription-form input[type="text"],
+        .footer .footer-content .subscription-form input[type="email"],
+        .footer .footer-content .subscription-form input[type="checkbox"] {
+            margin: 5px;
+        }
+
+        .footer .footer-content .subscription-form button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer .footer-content .subscription-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="call-to-action-container">
+            <button>Contact Us</button>
+        </div>
+    </nav>
+    <main class="main-content">
+        <section class="section">
+            <div class="section-content">
+                <h2>Home Section</h2>
+                <p>This is the Home section content.</p>
+                <button class="call-to-action-container">Get Started</button>
+            </div>
+            <div class="image-container">
+                <img src="https://via.placeholder.com/300" alt="Sample Image">
+            </div>
+        </section>
+        <section class="services-section">
+            <div class="services-description">
+                <h2>What We Do</h2>
+                <p>Here is a brief description of our services. We provide a range of solutions to meet your needs.</p>
+            </div>
+            <div class="services-images">
+                <div class="services-image-item">
+                    <img src="https://via.placeholder.com/300" alt="Service 1">
+                    <div class="text-content">
+                        <h3>Service 1</h3>
+                        <p>Description of Service 1</p>
+                    </div>
+                    <button>Learn More</button>
+                </div>
+                <div class="services-image-item">
+                    <img src="https://via.placeholder.com/300" alt="Service 2">
+                    <div class="text-content">
+                        <h3>Service 2</h3>
+                        <p>Description of Service 2</p>
+                    </div>
+                    <button>Learn More</button>
+                </div>
+                <div class="services-image-item">
+                    <img src="https://via.placeholder.com/300" alt="Service 3">
+                    <div class="text-content">
+                        <h3>Service 3</h3>
+                        <p>Description of Service 3</p>
+                    </div>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="section-content">
+                <h2>Another Section Title</h2>
+                <p>This is another sample paragraph for the section content.</p>
+            </div>
+            <div class="call-to-action-container">
+                <button>Call to Action</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="app-bar-info">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="call-to-action-container">
+                    <button>Contact Us</button>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div>
+                    <h3>Stay in Contact</h3>
+                    <p>Email: example@example.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div>
+                    <button>Your Name</button>
+                    <button>Your Email</button>
+                    <label>
+                        <input type="checkbox">
+                        Subscribe to newsletter
+                    </label>
+                </div>
+            </div>
+            <div class="subscription-form">
+                <button>Subscribe!</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
